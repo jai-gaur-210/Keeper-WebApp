@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FiPlus } from "react-icons/fi"
 
 function CreateArea(props){
 
@@ -29,10 +30,10 @@ function CreateArea(props){
 
     return (
         <div>
-            <form>
+            <form className="create-note">
                 <input name="title" onChange={handleChange} value={note.title} placeholder="Title"/>
                 <textarea name="content" onChange={handleChange} value={note.content} placeholder="Take a note...." rows={3}/>
-                <button onClick={submitNote}>Add</button>                
+                <button onClick={submitNote}><FiPlus style={{fontSize: "20px"}}/></button>                
             </form>
         </div>  
     );

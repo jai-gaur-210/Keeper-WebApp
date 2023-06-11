@@ -1,8 +1,9 @@
 import React from "react";
+import { FaTrash } from "react-icons/fa"
 
 function Note(props) {
 
-    function handleClick(){
+    function handleClick() {
         props.onDelete(props.id)
     }
 
@@ -10,7 +11,7 @@ function Note(props) {
         <div className="note">
             <h1>{props.title}</h1>
             <p>{props.content}</p>
-            <button onClick={handleClick}>DELETE</button>
+            <FaTrash onClick={handleClick} style={{ontSize: '18px', position: "relative",float:" right",color: "#f5ba13",border: "none" ,cursor: "pointer",outline: "none" , margin:"3.5px"}} />
         </div>
     </note>
 
